@@ -1,0 +1,10 @@
+<!doctype html><html><head><meta charset="utf-8"><title>Authorised — Sofia Has a Question</title>
+<style>body{font-family:-apple-system,Helvetica,Arial,sans-serif;max-width:720px;margin:40px auto;padding:0 20px;line-height:1.5;color:#222}code{background:#f3f3f3;padding:2px 6px;word-break:break-all}</style></head><body>
+<h1>TikTok authorisation received</h1>
+<p>This page completes the one-time sign-in that lets the series' publishing tool post to its own TikTok account. Nothing is stored here.</p>
+<p id="msg">Reading the response…</p>
+<script>
+const q=new URLSearchParams(location.search); const code=q.get('code'), err=q.get('error');
+document.getElementById('msg').innerHTML = err ? ('Error: <code>'+err+'</code> '+(q.get('error_description')||'')) :
+  (code ? 'Authorisation code: <code id="code">'+code+'</code><br>You can close this page.' : 'No code in the URL.');
+</script></body></html>
